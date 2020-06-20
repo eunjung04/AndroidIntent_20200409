@@ -36,5 +36,16 @@ class MainActivity : AppCompatActivity() {
             val myIntent=Intent(Intent.ACTION_CALL,myUri)
             startActivity(myIntent)
         }
+
+        smsBtn.setOnClickListener {
+            //입력한 번호로 전화를 걸도록 직접 코드 수정.
+            val inputPhoneNum=phoneNumEdt.text.toString()
+
+            //어느 화면으로 갈지 직접 명시.=>Uri를 이용해서 명시.
+            val myUri=Uri.parse("smsto:${inputPhoneNum}")
+            val myIntent=Intent(Intent.ACTION_SENDTO,myUri)
+            myIntent.putExtra("sms_body","자동 입력 내용")
+            startActivity(myIntent)
+        }
     }
 }
