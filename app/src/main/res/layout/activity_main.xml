@@ -7,6 +7,13 @@
     tools:context=".MainActivity"
     android:padding="15dp">
 
+    <EditText
+        android:id="@+id/phoneNumEdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:hint="전화 걸 번호 입력"/>
+
    <LinearLayout
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
@@ -16,7 +23,7 @@
        <TextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-           android:text="DIAL 예제(010-1234-1234)"/>
+           android:text="DIAL 예제(입력한 번호로)"/>
 
        <TextView
            android:layout_width="0dp"
