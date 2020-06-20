@@ -47,5 +47,17 @@ class MainActivity : AppCompatActivity() {
             myIntent.putExtra("sms_body","자동 입력 내용")
             startActivity(myIntent)
         }
+
+        naverBtn.setOnClickListener {
+            val myUri=Uri.parse("https://nave.com")
+            val myIntent=Intent(Intent.ACTION_VIEW, myUri)
+            startActivity(myIntent)
+        }
+
+        kakaoAppBtn.setOnClickListener {
+            val myUri=Uri.parse("market://details?id=com.kakako.talk")
+            val myIntent=Intent(Intent.ACTION_VIEW, myUri)
+            startActivity(myIntent)
+        }
     }
 }
